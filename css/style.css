@@ -1,0 +1,284 @@
+:root {
+  --cream: #faf6ec;
+  --cream-deep: #f2ebdb;
+  --ink: #1a1a1a;
+  --gray: #5b5b5b;
+  --gold: #b8912f;
+  --gold-deep: #96741f;
+  --hairline: rgba(184, 145, 47, 0.35);
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --max: 700px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0 0 1.25rem;
+}
+
+a { color: inherit; }
+
+/* Header */
+
+.site-header {
+  border-bottom: 1px solid var(--hairline);
+  background: var(--cream);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.brand-mark img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-ghost {
+  border: 1px solid var(--gold);
+  color: var(--ink);
+}
+
+.btn-ghost:hover {
+  background: var(--gold);
+  color: var(--cream);
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--cream);
+  border: 1px solid var(--ink);
+  margin-top: 1.75rem;
+}
+
+.btn-primary:hover {
+  background: var(--gold-deep);
+  border-color: var(--gold-deep);
+}
+
+/* Hero */
+
+.hero {
+  text-align: center;
+  padding: 5rem 1.5rem 4.5rem;
+}
+
+.hero-wordmark {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto 2.25rem;
+  display: block;
+}
+
+.hero-line {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  max-width: 560px;
+  margin: 0 auto 1.25rem;
+}
+
+.hero-line--secondary {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 1.05rem;
+  color: var(--gray);
+  max-width: 540px;
+}
+
+.hero-audience {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-top: 1.75rem;
+}
+
+/* POV */
+
+.pov {
+  padding: 1rem 1.5rem 4.5rem;
+  font-size: 1.1rem;
+  line-height: 1.85;
+}
+
+.pov p {
+  margin: 0 0 1.5rem;
+}
+
+.pov p:last-child {
+  margin-bottom: 0;
+}
+
+/* About */
+
+.about {
+  padding: 1rem 1.5rem 5rem;
+  border-top: 1px solid var(--hairline);
+  padding-top: 4rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border-radius: 6px;
+}
+
+.about-copy p {
+  margin: 0 0 1.25rem;
+  font-size: 1.05rem;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* Channels */
+
+.channels {
+  padding: 1rem 1.5rem 5rem;
+  border-top: 1px solid var(--hairline);
+  padding-top: 4rem;
+}
+
+.channel-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  text-decoration: none;
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.25rem;
+  background: var(--cream-deep);
+  transition: background 0.15s ease;
+}
+
+.channel-card:hover {
+  background: #ecdfbd;
+}
+
+.channel-label {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-deep);
+  font-weight: 600;
+}
+
+.channel-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.channel-sub {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+.channel-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+.channel-link {
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 4px;
+  color: var(--ink);
+}
+
+.channel-link:hover {
+  color: var(--gold-deep);
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid var(--hairline);
+  padding: 2.5rem 1.5rem 3rem;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--gray);
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+  .hero { padding: 3.5rem 1.25rem 3.5rem; }
+  .hero-line { font-size: 1.1rem; }
+  .hero-line--secondary { font-size: 0.98rem; }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-photo {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+  .channel-name { font-size: 1.15rem; }
+}
